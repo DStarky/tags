@@ -1,5 +1,22 @@
 (function () {
-  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+  /* ===== RULES AND MODAL WINDOW ===== */
+
+  let isViewed = localStorage.getItem('isViewed'); // Get variable from localStorage
+
+  const dialog = document.querySelector('.dialog'); // Get dialog node
+  const rules = document.querySelector('.rules'); // Get show rules button
+
+  if (isViewed === null || isViewed === 'false') { // If user has view or first visited site
+    dialog.showModal(); 
+    localStorage.setItem('isViewed', 'true'); // Set new value for variable
+  }
+
+  rules.addEventListener('click', () => {
+    dialog.showModal();
+  })
+  /* ===== GAME ===== */
+
+  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
   function shuffle(arr) {
     result = [];

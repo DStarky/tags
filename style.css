@@ -1,4 +1,4 @@
-*{
+* {
   padding: 0;
   margin: 0;
 }
@@ -16,6 +16,19 @@ h1 {
   left: 50%;
   top: 32px;
   transform: translateX(-50%);
+}
+
+.rules{
+  position: absolute;
+  left: 50%;
+  top: 120px;
+  transform: translateX(-50%);
+  background-color: transparent;
+  border: none;
+  color: lightseagreen;
+  cursor: pointer;
+  font-size: 16px;
+  border-bottom: 1px dashed lightseagreen;
 }
 
 .container {
@@ -45,4 +58,58 @@ h1 {
 
 .active {
   background-color: lightskyblue;
+}
+
+.wrapper{
+position: relative;
+}
+
+.dialog{
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  padding: 28px;
+  max-width: 30%;
+  background-color: lightsalmon;
+  border: 4px solid black;
+  inset: 0;
+  position: fixed;
+}
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.dialog__title{
+  margin-bottom: 16px;
+  font-size: 32px;
+}
+
+.dialog__text{
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.dialog__img{
+  width: 65%;
+  margin: 16px;
+}
+
+.button{
+  width: 100%;
+  padding: 10px 15px 12px;
+  text-align: center;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  color: white;
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 1rem;
+  transition: background-color 0.2s linear;
+  cursor: pointer;
+  background-color: black;
+  outline: none;
+  position: relative;
 }
